@@ -14,6 +14,17 @@
 # define LIBFT_H
 
 # include <stddef.h>
+# include <stdlib.h>
+# include <unistd.h>
+# include <stdio.h>
+
+typedef struct s_list
+{
+void *content;
+struct s_list *next;
+} t_list;
+
+int ft_atoi(const char *str);
 
 size_t ft_strlen(char *str);
 void	ft_strcpy(char	*dest, char *src);

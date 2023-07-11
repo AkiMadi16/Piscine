@@ -3,19 +3,25 @@ CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 SRC = $(wildcard ft_*.c)
 OBJ = $(SRC:.c=.o)
+OBJB = $(SRCB:.c=.o)
+LIBC = ar rcs
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	ar rcs $(NAME) $(OBJ)
-
+	$(LIBC) $(NAME) $(OBJ)
+	$(CC) $(CFLAGS) -o $(NAME) $(OBJ)
 
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
+	bonus: $(NAME) $(OBJ)
+					$(LIBC) $(NAME) $(OBJB)
+
 clean:
-	rm -f $(OBJ)
+	rm  -f $(OBJ)
+	rm -f $(OBJ) $(NAME) *~
 
 fclean: clean
 	rm -rf $(NAME)
