@@ -16,12 +16,12 @@ $(NAME): $(OBJ)
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
-	bonus: $(NAME) $(OBJ)
-					$(LIBC) $(NAME) $(OBJB)
+bonus: $(NAME) $(OBJ)
+			$(LIBC) $(NAME) $(OBJB)
 
 clean:
 	rm  -f $(OBJ)
-	rm -f $(OBJ) $(NAME) *~
+	rm  -rf $(OBJ) $(NAME) *~
 
 fclean: clean
 	rm -rf $(NAME)

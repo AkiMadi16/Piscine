@@ -6,3 +6,14 @@ int ft_isalnum(int c)
     return (1);
     return (0);
 }
+
+/*int main(int argc, char **argv)
+{
+  (void)argc;
+  
+  char c = argv[0][1];
+  int result = ft_isalnum(c);
+  printf("result: %d\n", result);
+
+  return (0);
+}*/

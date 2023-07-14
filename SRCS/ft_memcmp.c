@@ -2,18 +2,32 @@
 
 int ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-    unsigned char *ptr;
-    unsigned char *ptr1;
+    const unsigned char *ptr;
+    const unsigned char *ptr1;
+    size_t        i;
 
     if (n == 0)
         return (0);
-        ptr = (unsigned char *)s1;
-        ptr1 = (unsigned char *)s2;
-        while ((*ptr == *ptr1) && n -1 > 0)
+        ptr = (const unsigned char *)s1;
+        ptr1 = (const unsigned char *)s2;
+        i = 0;
+        while (i < n)
         {
-            ptr++;
-            ptr1++;
-            n--;
+           if (ptr[i] != ptr1[i])
+            return (ptr[i] - ptr1[i]);
         }
-        return((int)(*ptr - *ptr1));
+        i++;
+        return (0);
 }
+
+/*int main()
+{
+    char str1[] = "Hello";
+    char str2[] = "World!";
+    int result;
+
+    result = ft_memcmp(str1, str2, 5);
+
+    printf("Comparison result: %d\n", result);
+    return (0);
+}*/
