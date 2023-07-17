@@ -4,9 +4,8 @@ CFLAGS = -Wall -Wextra -Werror
 SRC = $(wildcard ft_*.c)
 OBJ = $(SRC:.c=.o)
 OBJB = $(SRCB:.c=.o)
-LIBC = ar rcs
-
-all: $(NAME)
+LIBC = ar -rcs
+# all: $(NAME)
 
 $(NAME): $(OBJ)
 	$(LIBC) $(NAME) $(OBJ)
@@ -24,14 +23,14 @@ clean:
 	rm  -rf $(OBJ) $(NAME) *~
 
 fclean: clean
-	rm -rf $(NAME)
+	rm -f $(NAME)
 
 re: fclean all
 	$(make)
 
-debug: $(CMAKEDIR) $(CMAKEDIR)Makefile
-		$(MAKE) -C $(CMAKEDIR) libftdebug
+# debug: $(CMAKEDIR) $(CMAKEDIR)Makefile
+# 		$(MAKE) -C $(CMAKEDIR) libftdebug
 
-test: all
+# test: all
 
 .PHONY: all clean fclean re bonus
