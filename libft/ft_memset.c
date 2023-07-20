@@ -12,19 +12,19 @@
 
 #include "libft.h"
 
-void	*ft_memset(void *s, int c, size_t n)
+void	*ft_memset(void *b, int c, size_t len)
 {
 	size_t	i;
 	char	*str;
 
 	i = 0;
-	str = s;
-	while (i < n)
+	str = b;
+	while (i < len)
 	{
 		str[i] = c;
 		i++;
 	}
-	return (s);
+	return (b);
 }
 
 /*int main()
@@ -33,7 +33,7 @@ void	*ft_memset(void *s, int c, size_t n)
 
   printf("Before memset: %s\n", str);
 
-  ft_memset(str, '*', 8);
+  ft_memset(str, '*', 12);
 
   printf("After memset: %s\n", str);
   return (0);
