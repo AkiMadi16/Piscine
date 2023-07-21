@@ -1,27 +1,37 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mmeegaha <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/07/21 11:47:07 by mmeegaha          #+#    #+#             */
+/*   Updated: 2023/07/21 17:18:51 by mmeegaha         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-void	modify_character(unsigned int index, char *c)
+/*void	modify_character(unsigned int index, char *c)
 {
-	 *c = 'A' + index;
-}
+	*c = 'A' + index;
+}*/
 
-void	ft_striteri(char *s, void(*f)(unsigned int, char*))
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	if(s == NULL || f == NULL)
-		return;
+	unsigned int	index;
 
-	unsigned	int	index;
-	
+	if (s == NULL || f == NULL)
+		return ;
 	index = 0;
-	while (*s == '\0')
+	while (s[index] != '\0')
 	{
-		f(index, s);
-		s++;
+		f (index, s + index);
 		index++;
 	}
 }
 
-int	main()
+/*int	main()
 {
 	char str[] = "Hello world!";
 	printf("Original String: %s\n", str);
@@ -29,4 +39,4 @@ int	main()
 	ft_striteri(str, modify_character);
 	printf("Modified String: %s\n", str);
 	return (0);
-}
+}*/

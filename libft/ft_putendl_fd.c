@@ -1,19 +1,31 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mmeegaha <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/07/21 11:24:52 by mmeegaha          #+#    #+#             */
+/*   Updated: 2023/07/21 11:36:56 by mmeegaha         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	int	i;
+	int		i;
+	char	newline;
 
 	i = 0;
 	if (s == NULL)
-		return;
+		return ;
 	while (s[i] != '\0')
 	{
 		write(fd, &s[i], 1);
 		i++;
 	}
-	
-	char newline = '\n';
+	newline = '\n';
 	write(fd, &newline, 1);
 }
 
@@ -25,4 +37,3 @@ void	ft_putendl_fd(char *s, int fd)
 	ft_putendl_fd("This is a test!", 1);
 	return (0);
 }*/
-	

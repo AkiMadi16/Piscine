@@ -6,7 +6,7 @@
 /*   By: mmeegaha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 16:10:34 by mmeegaha          #+#    #+#             */
-/*   Updated: 2023/07/17 16:35:56 by mmeegaha         ###   ########.fr       */
+/*   Updated: 2023/07/21 11:56:48 by mmeegaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,11 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 		{
 			if (str[i + j] == '\0' && to_find[j] == '\0')
 				return ((char *)&str[i]);
-				j++;
+			j++;
 		}
 		if (to_find[j] == '\0')
 			return ((char *)(str + i));
-			i++;
+		i++;
 	}
 	return (0);
 }

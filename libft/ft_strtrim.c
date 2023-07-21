@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mmeegaha <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/07/21 11:57:10 by mmeegaha          #+#    #+#             */
+/*   Updated: 2023/07/21 16:11:51 by mmeegaha         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 static	int	ft_check_set(char const c, char const *set)
@@ -9,7 +21,7 @@ static	int	ft_check_set(char const c, char const *set)
 	{
 		if (set[i] == c)
 			return (1);
-			i++;
+		i++;
 	}
 	return (0);
 }
@@ -23,7 +35,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	if (!s1 || !set)
 		return (NULL);
-	
 	start = 0;
 	while (s1[start] && ft_check_set(s1[start], set))
 		start++;
@@ -38,7 +49,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return (new);
 }
 
-int	main()
+/*int	main()
 {
 	char *s1 = "  Hello World!   ";
 	char *set = " ";
@@ -55,5 +66,4 @@ int	main()
 		printf("Failed to trim string.\n");
 	}
 	return (0);
-}
-
+}*/

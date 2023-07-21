@@ -6,7 +6,7 @@
 /*   By: mmeegaha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 15:24:34 by mmeegaha          #+#    #+#             */
-/*   Updated: 2023/07/17 15:27:35 by mmeegaha         ###   ########.fr       */
+/*   Updated: 2023/07/21 11:22:24 by mmeegaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	{
 		if (((unsigned char *)s)[i] == (unsigned char)c)
 			return ((unsigned char *)s + i);
-			i++;
+		i++;
 	}
 	return (NULL);
 }

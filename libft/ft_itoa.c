@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mmeegaha <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/07/21 11:11:42 by mmeegaha          #+#    #+#             */
+/*   Updated: 2023/07/21 11:24:03 by mmeegaha         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 static	char	*ft_char(char *s, unsigned int number, long int len)
@@ -13,7 +25,7 @@ static	char	*ft_char(char *s, unsigned int number, long int len)
 static	long	int	ft_len(int n)
 {
 	int	len;
-	
+
 	len = 0;
 	if (n <= 0)
 		len = 1;
@@ -27,8 +39,8 @@ static	long	int	ft_len(int n)
 
 char	*ft_itoa(int n)
 {
-	char		*s;
-	long	int	len;
+	char			*s;
+	long int		len;
 	unsigned int	number;
 
 	len = ft_len(n);

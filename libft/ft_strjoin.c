@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mmeegaha <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/07/21 11:50:12 by mmeegaha          #+#    #+#             */
+/*   Updated: 2023/07/21 12:16:30 by mmeegaha         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
@@ -5,33 +17,20 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	len_s1;
 	size_t	len_s2;
 	char	*result;
-
-	len_s1 = 0;
-	len_s2 = 0;
-	if (s1 != NULL)
-	{
-		while (s1[len_s1] != '\0')
-			len_s1++;
-	}
-	if (s2 != NULL)
-	{
-		while (s2[len_s2] != '\0')
-			len_s2++;
-	}
-
-	result = (char *)malloc((len_s1 + len_s2 +1) * sizeof(char));
-	if (result == NULL)
-		return NULL;
 	size_t	i;
+	size_t	j;
 
+	len_s1 = ft_strlen(s1);
+	len_s2 = ft_strlen(s2);
+	result = (char *)malloc((len_s1 + len_s2 + 1) * sizeof(char));
+	if (result == NULL)
+		return (NULL);
 	i = 0;
 	while (i < len_s1)
 	{
 		result[i] = s1[i];
 		i++;
 	}
-	size_t	j;
-	
 	j = 0;
 	while (j < len_s2)
 	{
@@ -42,7 +41,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	return (result);
 }
 
-int	main()
+/*int	main()
 {
 	char *prefix = "Hello ";
 	char *suffix = "world!";
@@ -57,5 +56,4 @@ int	main()
 	printf("Result: %s\n", result);
 	free(result);
 	return (0);
-} 
-
+}*/
