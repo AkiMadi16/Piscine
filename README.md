@@ -4,7 +4,7 @@ All projects and files that were submitted from May-June 2023 for the Adelaide 4
 
 | Project                                                     | Files Submitted | Result                 |
 | ----------------------------------------------------------- | --------------- | ---------------------- |
-| [C00](https://github.com/mmeegaha/42-Piscine/tree/main/C00) | Ex00-Ex06       | 70% \| Pass &nbsp; ✅  |
+| [C00](https://github.com/mmeegaha/42-Piscine/tree/master/C00) | Ex00-Ex06       | 70% \| Pass &nbsp; ✅  |
 | [C01](https://github.com/mmeegaha/42-Piscine/tree/main/C01) | Ex00-Ex08       | 60% \| Pass &nbsp; ✅  |
 | [C02](https://github.com/mmeegaha/42-Piscine/tree/main/C02) | Ex00-Ex08       | 55% \| Pass &nbsp; ✅  |
 | [C03](https://github.com/mmeegaha/42-Piscine/tree/main/C03) | Ex00-Ex04       | 50% \| Pass &nbsp; ✅  |
